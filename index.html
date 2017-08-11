@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Warriors of Paint v0.1</title>
+	<link rel="shortcut icon" type="image/x-icon" href="wopico.ico" />
+	<style type="text/css">
+        *{
+            font-family: 'dtm';
+        }
+		#gameCanvas{
+			cursor: url(sword.cur), pointer;
+			background-color: #C0C0C0;
+		}
+		#gameCanvas:active{
+			cursor: url(sword.cur);
+			background-color: #C0C0C0;
+		}
+		#gameCanvas:focus{
+			cursor: url(sword.cur);
+			background-color: #C0C0C0;
+		}
+		
+		#visual{
+			cursor: url(sword.cur), pointer;
+			background-color: #C0C0C0;
+		}
+		#visual:active{
+			cursor: url(sword.cur);
+			background-color: #C0C0C0;
+		}
+		#visual:focus{
+			cursor: url(sword.cur);
+			background-color: #C0C0C0;
+		}
+		@font-face {
+    		font-family: 'dtm';
+    		src: url('DTM-Sans.otf');
+		}
+        #up{
+            font-size: 30px;
+            border: 3px solid black;
+            color: black;
+            height: 60px;
+            width: 160px;
+            margin: 0;
+            text-align: center;
+            vertical-align: middle;
+            background-color: rgb(219, 36, 26);
+            display: inline-block;
+            
+        }
+        #up:active{
+            border: 3px solid rgb(219, 36, 26);
+            color: rgb(219, 36, 26);
+            text-align: center;
+            background-color: black;
+        }
+        
+        p{
+            padding-left: 2%;
+            padding-right: 2%;
+            display: inline-block;
+        }
+        
+        #error{
+            color: red;
+        }
+        #error2{
+            color: red;
+        }
+        
+        #stuff{
+            border: 1px solid black;
+            background-color: grey;
+        }
+        
+        #double{
+            background-image: linear-gradient(135deg, black 50%,  white 50%);
+            font-size: 30px;
+            border: 1px solid black;
+            color: rgb(219, 36, 26);
+            height: 60px;
+            margin: 0;
+            text-align: center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        
+        #double:active{
+            background-image: linear-gradient(135deg, white 50%, black 50%);
+            font-size: 30px;
+            border: 1px solid black;
+            color: rgb(219, 36, 26);
+            height: 60px;
+            margin: 0;
+            text-align: center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        
+        #executeSpec{
+            background-image: linear-gradient(-120deg, black 70%,  white 25%);
+            font-size: 30px;
+            border: 1px solid black;
+            color: rgb(219, 36, 26);
+            height: 60px;
+            margin: 0;
+            text-align: center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        
+        #executeSpec:active{
+            background-image: linear-gradient(-120deg, white 70%, black 70%);
+            font-size: 30px;
+            border: 1px solid black;
+            color: rgb(219, 36, 26);
+            height: 60px;
+            margin: 0;
+            text-align: center;
+            vertical-align: middle;
+            display: inline-block;
+        }
+	</style>
+</head>
+
+<body>
+	<div>
+		<canvas id="visual" />
+	</div>
+	
+	<div>
+		<canvas id="gameCanvas" />
+	</div>
+    <div id="stuff">
+        <button id="up" onclick="upgrade();">Upgrade</button>
+        <p id="gold"></p>
+        <p id="dmg"></p>
+        <p id="points">0</p>
+        <button id="double" onclick="cleave()">Cleave</button>
+        <p id="error"></p>
+        
+        <button id="executeSpec" onclick="execute()">eXecute</button>
+        <p id="error2"></p>
+    </div>
+	<script type="text/javascript" src="game.js"></script>
+</body>
+
+</html>
